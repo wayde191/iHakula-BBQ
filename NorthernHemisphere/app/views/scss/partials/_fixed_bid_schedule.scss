@@ -1,0 +1,28 @@
+.fixed-bid-schedule-container {
+  margin-bottom: 1em;
+
+  .payment-row{
+    margin-bottom: 0.8em;
+    padding-bottom: 0.8em;
+    border-bottom: 1px solid lighten($grey_border, 10%);
+    overflow: hidden;
+  }
+
+  .fixed-bid-row{
+    margin: 0;
+  }
+
+  .fixed-bid-schedule-content {
+    overflow: hidden;
+
+    .add-new-link {
+      cursor: pointer;
+    }
+    .delete-item-link {
+      margin-top: 1.2em;
+      float: right;
+    }
+  }
+}
+
+

@@ -1,0 +1,166 @@
+.batch-edit__control-buttons {
+  display: inline-block;
+}
+
+.batch_edit_button_container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  ul.control-button-list {
+    padding: 0;
+    li.control-button {
+      @include mq-desktop {
+        margin-left: 10px;
+      }
+      width: 115px;
+      display: inline-block;
+      &:first-child {
+        margin-left: 0;
+      }
+      &.toggle-staffing-office {
+        width: 200px;
+      }
+      @include mq-mobile {
+        width: 48.5%;
+        margin-top: 1.5%;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.left-nav {
+  @include mq-mobile {
+    margin-left: 2%;
+  }
+}
+
+.batch-edit__container {
+  position: relative;
+  background-color: $blue_pale;
+  padding: 0.6em 0.0em 0.0em 0.0em;
+  border: $blue_2 2px solid;
+  border-radius: 0.2em;
+}
+
+.batch-edit__rate-type {
+  margin-left: 0.3em;
+}
+
+.batch-edit__cancel-button {
+  @include basic-button;
+  @include narrow-button;
+  @include button-background-with-hover($dark_grey);
+  float: right;
+
+  margin-top: -0.4em;
+  margin-bottom: 0;
+  padding: 0.5em 0.8em;
+
+  @include mq-desktop {
+    float: none;
+    margin-left: 2em;
+  }
+}
+
+.batch-edit__next-button {
+  @include basic-button;
+  @include narrow-button;
+  @include button-background-with-hover($green_3);
+
+  @include mq-desktop {
+    margin-bottom: 1em;
+  }
+
+}
+
+.batch-edit__next-button:disabled {
+  color: lighten($grey, 10%);
+  background-color: $grey_naviagation;
+  text-decoration: line-through;
+}
+
+.batch-edit__save-button {
+  @include basic-button;
+  @include narrow-button;
+  @include button-background-with-hover($green_3);
+  padding-right: 40px;
+  @include mq-desktop {
+    margin-bottom: 1em;
+  }
+}
+
+.batch-edit__roles-message {
+  display: inline-block;
+  float: left;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 500;
+  @include mq-desktop {
+    margin-bottom: 1em;
+  }
+
+}
+
+.batch-edit__select-all-checkbox {
+  @include basic-checkbox(1.2em);
+  margin-left: 0.5em;
+  float: left;
+}
+
+.batch-edit__select-all-label {
+  padding-left: 0.7em;
+  float: left;
+  font-weight: 500;
+}
+
+input.batch-edit__select-role {
+  @include basic-checkbox(1.2em);
+  float: left;
+  margin-right: 0.2em;
+  @include mq-desktop{
+  margin-top: 0.25em;
+  }
+}
+
+.batch-edit__role-disabled {
+  opacity: 0.4;
+
+  .staffing-role-header {
+    cursor: default !important;
+  }
+}
+
+.batch-edit__role-checked {
+  background-color: $blue_2 !important;
+  color: white;
+
+  td {
+    background-color: $blue_2 !important;
+    border-bottom: $blue_divider 1px solid !important;
+    @include mq-desktop {
+      border: $blue_divider 1px solid !important;
+    }
+  }
+
+  .date{
+    margin-top: 0.2px;
+  }
+  .grade {
+    border-right: $blue_divider 1px solid;
+    border-left: $blue_divider 1px solid;
+  }
+
+  .assignments{
+    color: $white !important;
+    border-top:  $blue_divider 1px solid !important;
+    border-bottom: none !important;
+  }
+
+}
+
+.batch-edit_button_row {
+  margin-bottom: 0.1em;
+}

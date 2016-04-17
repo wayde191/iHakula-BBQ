@@ -1,0 +1,70 @@
+doctype html
+html lang="zh-CN"
+  head
+    title BBQ北伴球
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+    meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, maximum-scale=1, user-scalable=no"
+
+    link rel="stylesheet" href="/assets/init.css"
+    link href="/images/apple-touch-icon-57-57.png" rel="shortcut icon"
+    link href="/images/apple-touch-icon-57-57.png" rel="apple-touch-icon"
+    link href="/images/apple-touch-icon-72-72.png" rel="apple-touch-icon" sizes="76x76"
+    link href="/images/apple-touch-icon-retina.png" rel="apple-touch-icon" sizes="120x120"
+    link href="/images/apple-touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152"
+
+    - if settings.development?
+      script src="/bower_components/accounting.js/accounting.min.js"
+      script src="/bower_components/jquery/dist/jquery.js"
+      script src="/bower_components/jquery-ui/ui/jquery-ui.js"
+      script src="/javascripts/lib/jquery.ui.touch-punch.js"
+      script src="/javascripts/lib/underscore.js"
+      script src="/javascripts/lib/clearsearch.js"
+      script src="/javascripts/lib/knockout-3.1.0.js"
+      script src="/javascripts/lib/knockout-mapping-2.4.1.js"
+      script src="/javascripts/lib/knockout.validation-1.0.2.js"
+      script src="/javascripts/lib/toastr.js"
+      script src="/bower_components/pickadate/lib/picker.js"
+      script src="/bower_components/pickadate/lib/picker.date.js"
+      script src="/bower_components/nouislider/Link.js"
+      script src="/bower_components/nouislider/jquery.nouislider.min.js"
+      script src="/bower_components/moment/moment.js"
+      script src="/bower_components/fastclick/lib/fastclick.js"
+      script src="/bower_components/underscore.string/lib/underscore.string.js"
+      script src="/bower_components/knockout-postbox/build/knockout-postbox.js"
+      script src="/bower_components/query-string/query-string.js"
+      script src="/bower_components/jquery-autosize/jquery.autosize.js"
+      script src="/bower_components/shake.js/shake.js"
+      script src="/javascripts/config/knockout_config.js"
+      script src="/assets/main.js"
+      script src="/javascripts/bindings/save_button.js"
+      script src="/javascripts/bindings/date_picker.js"
+      script src="/javascripts/bindings/expandable_textarea.js"
+      script src="/javascripts/bindings/probability_slider.js"
+      script src="/javascripts/bindings/section_slider.js"
+      script src="/javascripts/bindings/section_active.js"
+      script src="/javascripts/bindings/date.js"
+      script src="/javascripts/bindings/percentage.js"
+      script src="/javascripts/bindings/inline_editable.js"
+      script src="/javascripts/bindings/inline_editable_text.js"
+      script src="/javascripts/bindings/inline_editable_expandable_text.js"
+      script src="/javascripts/bindings/inline_editable_calendar.js"
+      script src="/javascripts/extenders/round_down_to_nearest.js"
+      script src="/javascripts/browser_hacks/preload_images.js"
+
+    - else
+      script src="/assets/app.min.js?release=@@timestamp"
+
+  body
+
+      div#main-page.main_page
+        - unless !(defined? hide_title).nil? && hide_title
+
+          header.page-header.header
+            .container
+              .header-title
+              a.app-title href="/" 北伴球
+              == render :slim, :'partials/navigation'
+
+        div#sf-view.container.sf-view
+          == yield

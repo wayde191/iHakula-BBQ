@@ -1,0 +1,33 @@
+.loading data-bind="visible: isLoading"
+  div.spinner Loading...
+
+div#join-activity data-bind="visible: !isLoading()"
+  div.activity-content
+    div#shake data-bind="visible: isFirstTime" style='display:none'
+      button#shakeButton 摇一摇
+    div#result data-bind="visible: wonCoupon" style='display:none'
+      p 二维码：
+      div#qrcode
+      p data-bind="text: prizeName"
+      p data-bind="text: '优惠码：' + couponId()"
+      p data-bind="text: '有效日期：' + endDate()"
+      p 说明：消费5元以上可以使用该抵金券。本券不设找零。
+    div#time-over data-bind="visible: showMessage" style='display:none'
+      p data-bind="text: messageType"
+      p data-bind="text: messageContent"
+    div#has-joined data-bind="visible: hasJoined" style='display:none'
+      p 您已经参加过该活动
+      p data-bind="text: '参加时间：' + joinedTime()"
+      p data-bind="text: '获奖情况：' + prizeName()"
+      p data-bind="text: '优惠码：' + couponId()"
+    div#speaker
+      audio#match src="/images/shake_match.wav"
+      audio#nomatch src="/images/shake_nomatch.wav"
+      audio#shake-sound-male src="/images/shake_sound_male.wav"
+
+javascript:
+  $(document).ready(function () {
+    var theOpenId = "#{openId}";
+    var theActivityId = "#{activityId}";
+    northernHemisphere.joinActivityPageViewModelFactory.applyToPage(theOpenId,theActivityId);
+  });

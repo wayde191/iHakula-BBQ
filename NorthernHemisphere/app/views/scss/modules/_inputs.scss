@@ -1,0 +1,51 @@
+@mixin form-input {
+  background-color: $white;
+  color: $grey;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  width: 100%;
+  padding: 0.2em;
+  font-weight:400;
+  font-size:1em;
+}
+
+
+@mixin field-with-right-icon($icon_url) {
+  background-image: url($icon_url);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+@mixin basic-checkbox($size) {
+  -webkit-appearance: initial;
+  border: $blue_2 2px solid;
+  background-color: white;
+  width: $size;
+  height: $size;
+  outline: none;
+
+  &:checked {
+    background-image: url('/images/check.png');
+    background-size: ($size - 0.2em);
+    background-position: center;
+    background-origin: border-box;
+  }
+}
+
+@mixin basic-radiobutton($size) {
+  -webkit-appearance: initial;
+  background: url('/images/radio_neutral_sml.png') no-repeat 0 0;
+  border: none;
+  padding: 10px;
+  width: $size;
+  height: $size;
+  outline: none;
+
+  &:checked {
+    background-size: ($size - 0.2em);
+    background: url('/images/radio_selected_sml.png') no-repeat 0 0;
+    background-origin: border-box;
+  }
+}

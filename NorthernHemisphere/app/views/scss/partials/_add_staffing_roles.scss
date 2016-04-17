@@ -1,0 +1,69 @@
+.add-staffing-roles {
+  @include modal-section;
+  @include mq-mobile {
+    @include modal-body;
+  }
+}
+
+.add-staffing-container {
+  @include modal;
+  @include mq-desktop {
+    overflow: scroll;
+  }
+  z-index: 1;
+}
+
+#close-staffing-section {
+  @include close-modal;
+}
+
+.add-roles-title {
+  @include modal-title;
+  margin-bottom: 1em;
+  @include mq-tablet {
+    margin-top: 0.2em;
+    font-size: 1.3em;
+    margin-bottom: 1.3em;
+  }
+}
+
+.add-staffing-role {
+  @include clearfix;
+  @include span-columns(12);
+  border-bottom: 1px solid lighten($grey_border, 10%);
+  padding: 0.25em 0.25em;
+
+  > .add-staffing-role-grade {
+    display: inline-block;
+    float: left;
+  }
+
+  span {
+    font-size: 1.2em;
+  }
+
+  > .add-staffing-role-number-staff {
+    float: right;
+  }
+}
+
+.add-staffing-role__decrease-role-count {
+  background: url('/images/minus.png') no-repeat center;
+  color: transparent;
+  margin-left: 0.5em;
+  padding: 0.4em 0.9em;
+  border: none;
+}
+
+.add-staffing-role__increase-role-count {
+  background: url('/images/plus.png') no-repeat center;
+  color: transparent;
+  margin-left: 0.5em;
+  padding: 0.4em 0.8em;
+  border: none;
+}
+
+#add-new-roles-missing-dates-error {
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+}

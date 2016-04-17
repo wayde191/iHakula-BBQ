@@ -1,0 +1,32 @@
+.inline_editable {
+  span {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.inline_editable_text {
+  span {
+    display: block;
+    cursor: pointer;
+  }
+  input {
+    background: lighten($green_3, 60%);
+  }
+}
+
+.inline_editable_expandable_text {
+  span {
+    display: block;
+    cursor: pointer;
+  }
+  textarea {
+    background: lighten($green_3, 60%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inline_editable span {
+    cursor: auto;
+  }
+}

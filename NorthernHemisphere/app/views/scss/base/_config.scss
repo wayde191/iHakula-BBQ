@@ -1,0 +1,89 @@
+//-------------------------- Media queries breakpoints
+$breakpoint_1: 400px;
+$breakpoint_2: 600px;
+$breakpoint_3: 800px;
+$breakpoint_4: 985px;
+
+$breakPointIPhonePortrait: 375px;
+$breakPoint1:		600px;
+$gt_breakPoint1:	601px; //greater than breakpoint1
+$breakPoint2:		780px;
+$gt_breakPoint2:    781px; //greater than breakpoint2
+
+
+//--------------------------------------------Colours
+
+// Earth and skin tones
+$skin_1: #FEE0C9;
+$skin_2: #F0BA95;
+$skin_3: #9E785F;
+$skin_4: #5E3E2A;
+
+$black:  #000000;
+
+$grey:   #808285;
+$dark_grey: #666;
+$very_dark_grey: #444;
+$grey_text: #333;
+$pale_grey: #F8F8F8;
+$midgrey:#808184;
+$shake_grey: #DCDCDC;
+$spinner-color: $grey_text;
+$light-grey-border: #DEDEDE;
+$light_grey: #EEEEEE;
+$grey_dark: darken($grey, 5%);
+$grey_slider: #d4d5d5;
+$grey_border: #c4c4c4;
+$grey_naviagation: #CCCCCC;
+$grey-secondary: #808080;
+$greyed-out-text: #B5B3B3;
+// Warm
+$yellow:  #FFF450;
+$orange:  #F78F31;
+$red:     #EE312D;
+$magenta: #B11C54;
+$purple:  #6A2569;
+$pink:    #EF5BA1;
+
+// Cool
+$green:   #B5B935;
+$green_2: #89B77F;
+$green_3: #11AA58;
+$green-active-role: #c4e7de;
+$blue:    #80C9D2;
+$blue_2:  #26BDCF;
+$blue_3:  #1A73BA;
+$blue_hover: #baebf0;
+$blue_pale: lighten($blue, 25%);
+$blue_2_lighter: lighten($blue_2, 10%);
+$blue_slider: #90e2eb;
+$blue_tabs: #018191;
+$blue_focus: #076a7b;
+$blue_tabs_hover: lighten($blue_tabs, 10%);
+$blue_divider: #9ADFE7;
+$blue_table_header: #dff5f7;
+$orange:  #f68b20;
+
+// Extended color palette
+$text-pink: #EE0B77;
+$white: #FFF;
+$text-link:#EE0B77;
+
+$groon:#ff6666;
+
+$light_red: lighten($red, 35%);
+
+//-------------------------- Padding
+
+$header_padding: 0.5em 0;
+
+//-------------------------- Font Weights
+
+$heavy_font_weight: 600;
+$medium_font_weight: 300;
+
+
+//-------------------------- Z-Index
+$modal-z-index: 199 !important;
+$mobile-overlay-z-index: 150;
+$toastr-z-index: 999999;

@@ -1,0 +1,40 @@
+# Gemfile
+
+# source "http://ruby.taobao.org"
+
+# Basic
+gem 'sinatra'
+gem 'sinatra-contrib' #config yml
+gem 'thin'
+
+# Log
+gem 'log4r'
+
+# Web
+gem 'json', '1.8.3'
+gem 'slim'
+
+# Mysql
+gem 'activerecord'
+gem 'mysql2'
+
+# Unicorn and capistrano
+gem 'unicorn'
+gem 'capistrano', '~> 2.15.5'
+gem 'capistrano-ext'
+gem 'rvm-capistrano'
+gem 'net-ssh', '~> 2.9.2'
+gem 'net-sftp', '~> 2.1.2'
+gem 'net-scp', '~> 1.2.1'
+gem 'net-ssh-gateway', '~> 1.2.0'
+
+# Tools
+gem 'rest-client'
+gem 'compass'
+gem 'susy'
+gem 'perfect-random-number-generator'
+
+# JPush
+gem 'jpush'
+
+

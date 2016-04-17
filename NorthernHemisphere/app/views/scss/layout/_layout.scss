@@ -1,0 +1,223 @@
+* {
+  @include border-box-sizing;
+}
+
+.main_page {
+}
+
+@mixin centre($axis: "both", $offset: 0%) {
+  position: absolute;
+  @if $axis == "y" {
+    @include translateY(-50%);
+    top: 50%  + $offset;
+  }
+  @if $axis == "x" {
+    @include translateX(-50%);
+    left: 50%;
+  }
+  @if $axis == "both" {
+    @include translate(-50%, -50%);
+    top: 50% - $offset;
+    left: 50%;
+  }
+}
+
+.header {
+  @include container();
+  background-color: $blue_2;
+  font-weight: 500;
+  max-width: 100%;
+  padding: $header_padding;
+}
+
+.header-title {
+  float: left;
+  display: inline;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.nav-bar-inline {
+  display: inline;
+  float: right;
+
+  ul {
+    list-style-type: none;
+    display: inline;
+
+    > li {
+      display: inline-block;
+      padding-left: 1.4em;
+    }
+  }
+
+  a {
+    color: $white;
+  }
+
+  @include mq-mobile {
+    display: none;
+  }
+}
+
+.remove-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+.container {
+  @include container();
+  max-width: 100%;
+  padding-bottom: 1em;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+  @include mq-desktop {
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+}
+
+.header .container {
+  padding-bottom: 0em;
+}
+
+.container-tab {
+  @include container(4 30em, $total-columns, 14);
+}
+
+.row {
+  @include span-columns(12);
+
+  margin-bottom: 0.75em;
+  display: block;
+  width: 100%;
+}
+
+.loading {
+  @include centre('both', 5%);
+
+  &.staffing-requests {
+    text-align: center;
+    width: 15em;
+    z-index: 2;
+
+    .message {
+      color: $blue-tabs;
+      padding: 0;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+
+}
+
+.four-column {
+  @include span-columns(4);
+}
+
+.four-column--last {
+  @include span-columns(4 omega);
+}
+
+.six-column {
+  @include span-columns(6);
+  padding-right: 2px;
+}
+
+.six-column--last {
+  @include span-columns(6 omega);
+  padding-left: 2px;
+}
+
+.twelve-column {
+  @include span-columns(12);
+}
+
+.referral-panel {
+  height: 30px;
+  content: " ";
+
+  div {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+@for $i from 1 through 12 {
+  .grid-row .col-#{$i}-mobile {
+    @include mq-mobile {
+      @include span-columns($i, 12, 0.4em);
+    }
+  }
+
+  .grid-row .col-#{$i}-mobile-last {
+    @include mq-mobile {
+      @include span-columns($i omega, 12, 0.4em);
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  .grid-row .col-#{$i}-tablet {
+    @include mq-tablet {
+      @include span-columns($i, 12);
+    }
+
+  }
+  .grid-row .col-#{$i}-tablet-last {
+    @include mq-tablet {
+      @include span-columns($i omega, 12);
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  .grid-row .col-#{$i}-desktop {
+    @include mq-desktop {
+      @include span-columns($i, 12);
+    }
+
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .grid-row .col-#{$i}-desktop-last {
+    @include mq-desktop {
+      @include span-columns($i omega, 12);
+    }
+
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@for $i from 1 through 12 {
+  .grid-row .col-#{$i} {
+    @include span-columns($i, 12);
+  }
+
+  .grid-row .col-#{$i}-last {
+    @include span-columns($i omega, 12);
+  }
+
+}
+
+.grid-row {
+  width: 100%;
+  margin-bottom: 0.75em;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  float: left;
+}
+
+
+
+

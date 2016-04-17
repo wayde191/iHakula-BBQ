@@ -1,0 +1,2 @@
+class IhakulaServiceError < Exception
+end

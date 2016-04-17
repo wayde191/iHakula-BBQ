@@ -1,0 +1,48 @@
+.noUi-background {
+  background-color: $blue_slider !important;
+}
+
+.noUi-origin {
+  background-color: $grey_slider !important;
+}
+
+.noUi-target {
+  border: none !important;
+  margin: 1em;
+}
+
+.noUi-handle {
+  background-color: $blue_2;
+  box-shadow: none;
+  border:1px solid $blue_2;
+
+  @include mq-mobile {
+    padding: 20px;
+    top: -12px !important;
+    content: none !important;
+
+    &:before {
+      content: none !important;
+    }
+
+    &:after {
+      content: none !important;
+    }
+  }
+}
+
+.slider-label {
+  position: relative;
+
+  @include mq-mobile {
+    margin-top: 15px;
+  }
+
+  &.slider-label__lower-bound {
+    float: left;
+  }
+
+  &.slider-label__upper-bound {
+    float: right;
+  }
+}

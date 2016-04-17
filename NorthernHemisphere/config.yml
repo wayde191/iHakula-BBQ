@@ -1,0 +1,38 @@
+development:
+  log_directory: /tmp/northern_hemisphere.log
+  auth_strategy: developer
+  staffing_authentication_token: 7fbff83c3d3cb1cd731785c9ae23700c
+  clicky_code: 100725224
+  session_secret: EFRaMySL6YhUMUUbES1xOLii12QGrK5oFiaG8msFPN1Y0ugagGqzFsJcimvb
+  sales_account_sharers_list: app/test_sales_account_sharers.yml
+  features:
+    volume_discounts: true
+    staffing_summary: true
+    filter_current_assignees: true
+    find_opportunity_shortcut: true
+
+test:
+  log_directory: /tmp/northern_hemisphere.log
+  auth_strategy: developer
+  staffing_authentication_token: 1234
+  clicky_code: 100725224
+  session_secret: EFRaMySL6YhUMUUbES1xOLii12QGrK5oFiaG8msFPN1Y0ugagGqzFsJcimvb
+  sales_account_sharers_list: app/test_sales_account_sharers.yml
+  features:
+    volume_discounts: true
+    staffing_summary: true
+    filter_current_assignees: true
+    find_opportunity_shortcut: true
+
+prod:
+  log_directory: /tmp/northern_hemisphere_prod.log
+  auth_strategy: saml
+  staffing_authentication_token: b87e6fbf3e422462858ae4e21df0b6dd
+  clicky_code: 100725268
+  session_secret: wpKhDpuJClT0HiAepihAnRImTcFOHFOcjHuX2ojxdit09jvs25303Eu8IxSi
+  sales_account_sharers_list: app/prod_sales_account_sharers.yml
+  features:
+    volume_discounts: false
+    staffing_summary: true
+    filter_current_assignees: true
+    find_opportunity_shortcut: true

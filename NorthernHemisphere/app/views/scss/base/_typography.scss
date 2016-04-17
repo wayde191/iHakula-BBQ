@@ -1,0 +1,105 @@
+html {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: $grey_text;
+  font-weight: 100;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 18px;
+  line-height: 1.4em;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.8em;
+  line-height: 0.8em;
+  font-weight: 300;
+  padding: 0;
+
+  @include mq-desktop {
+    margin-top:1.5em;
+    margin-bottom:0.75em;
+    font-size:2.2em;
+  }
+
+}
+
+h2 {
+  font-size: 1.1em;
+  line-height: 0.5em;
+  font-weight: 200;
+  padding: 0;
+  display: inline-block;
+
+  @include mq-desktop {
+    font-size: 1.4em;
+  }
+}
+
+h2.bold {
+  font-weight: 600;
+}
+
+.message {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  font-weight: 300;
+  padding-top: 1em;
+}
+
+.app-title {
+  font-size: 22px;
+  color: $white;
+  font-weight: 800;
+  float: left;
+  letter-spacing: -0.07em;
+}
+
+@mixin page-subtitle {
+  display:inline-block;
+  margin-top:1.5em;
+  line-height:1.1em;
+
+  @include mq-desktop {
+    font-size:1em;
+  }
+}
+
+@mixin page-title {
+  margin:0;
+  line-height:1.05em;
+
+  @include mq-desktop {
+
+  }
+}
+
+.oppdetails-account-title {
+  @include page-subtitle;
+  margin-right: 1em;
+  margin-top: 0.5em;
+}
+
+#closed-lost-label{
+  background-color: $skin_3;
+  color: $white;
+  font-weight: bold;
+  padding: 0.1em 1em;
+  text-align: center;
+  display: inline-block;
+
+}
+
+.oppdetails-oppty-title {
+  @include page-title;
+  display: inline;
+  word-wrap: break-word;
+  margin-right: 0.8em;
+}
+
+.probability_block {
+  font-size:1.2em;
+  letter-spacing: -0.5px;
+}

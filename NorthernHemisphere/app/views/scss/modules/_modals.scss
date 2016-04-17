@@ -1,0 +1,57 @@
+@mixin modal {
+  background-color: rgba($grey, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: $modal-z-index;
+  position: fixed;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // https://github.com/twbs/bootstrap/pull/10951.
+  outline: 0;
+}
+
+@mixin modal-section {
+  @include box-shadow(0 3px 9px rgba(0,0,0,.5));
+  top: 4%;
+  width: 60%;
+  left: 20%;
+  background-color: $white;
+  position: absolute;
+  padding: 1em;
+
+  @include mq-mobile {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@mixin modal-body{
+  overflow: scroll;
+}
+
+@mixin close-modal {
+  @include basic-button;
+  @include narrow-button;
+  @include button-background-with-hover($dark_grey);
+  font-size: 1em;
+  margin-bottom: 0;
+  padding: 0.5em 0.8em;
+  float: right;
+}
+
+@mixin modal-title {
+  float: left;
+
+  @include mq-tablet-and-desktop {
+    padding-top: 0.4em;
+    margin-top: 0px;
+  }
+}

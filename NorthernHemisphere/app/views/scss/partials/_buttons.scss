@@ -1,0 +1,115 @@
+.btn {
+  @include basic-button;
+  @include button-full-width-mobile;
+}
+
+.btn--success {
+  background: $green_3;
+  &:hover, &:focus {
+    background: darken($green_3, 5%);
+  }
+}
+
+.btn--success[state="disabled"] {
+  background-color: darken($grey_dark, 5%);
+}
+
+.btn--success[state='saving'] {
+  background: $green_3;
+  &:hover, &:focus {
+    background: $green_3;
+  }
+}
+
+.btn--funnel {
+  padding: 5px 15px;
+  background-color: $blue_2;
+  margin-left: 0;
+  &:hover, &:focus {
+    background: $blue_2_lighter;
+    outline: none;
+  }
+  @include mq-mobile {
+    display: block;
+    width: 33%;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+}
+
+.btn--secondary {
+  background: $grey-secondary;
+  color: white;
+  margin-left: 0.8em;
+
+  @include mq-mobile {
+    margin-left: 0em;
+  }
+
+  &:hover, &:focus {
+    background: darken($midgrey, 5%);
+    outline: none;
+  }
+}
+
+.btn--alert {
+  background: $red;
+
+  @include mq-mobile {
+    margin-left: 0em;
+  }
+
+  &:hover, &:focus {
+    background: darken($red, 5%);
+    outline: none;
+  }
+}
+
+@mixin btn-spinner($url, $position) {
+  background-image: url($url) !important;
+  background-position: $position center !important;
+  background-repeat: no-repeat !important;
+}
+
+.btn-spinner-green {
+  @include btn-spinner("/images/spinner-green.gif", 92%);
+}
+
+.wide-btn-spinner-green {
+  @include btn-spinner("/images/spinner-green.gif", 98%);
+}
+
+.btn-spinner-red {
+  @include btn-spinner("/images/spinner-red.gif", 92%);
+}
+
+.wide-btn-spinner-grey {
+  @include btn-spinner("/images/spinner-grey.gif", 98%);
+}
+
+
+.btn--memo {
+  @include basic-button;
+  @include narrow-button;
+  @include button-background-with-hover($light_grey);
+  color: $blue_tabs;
+}
+
+
+.btn-cancel {
+  @include basic-button;
+  @include narrow-button;
+  @include button-background-with-hover($dark_grey);
+  float: right;
+
+  margin-top: -0.4em;
+  margin-bottom: 0;
+  padding:  0.5em 0.8em;
+
+  @include mq-desktop {
+    float: none;
+    margin-left: 1em;
+  }
+}
+
+

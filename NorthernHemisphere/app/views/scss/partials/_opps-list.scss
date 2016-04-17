@@ -1,0 +1,246 @@
+#opportunity-list{
+  list-style-type: none;
+}
+
+#user-opportunities {
+  @include bleed($grid-padding);
+  clear: both;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  .opportunity:first-child {
+    border-top: 1px solid $light-grey-border;
+  }
+//
+//  .opportunity:last-child {
+//    margin-bottom: 3em;
+//  }
+
+  .opportunity {
+    @include clearfix;
+
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid $light-grey-border;
+    font-weight: 500;
+    a {
+      color: #333;
+    }
+    &:hover, &:focus {
+      background: $light_grey;
+    }
+
+  }
+}
+
+.opportunity-list-title {
+  width: 50%;
+  float: left;
+  padding:9px 0 7px 0;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.account-name {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: $midgrey;
+  border: 0px solid orange;
+}
+
+.opportunity-name {
+  padding-bottom: 4px;
+  padding-top: 2px;
+  font-size: 18px;
+  border: 0px solid brown;
+  display: block;
+}
+
+.opportunity-info{
+  float: right;
+}
+
+.opportunity-list-probability {
+  float: right;
+  width: 65px;
+  text-align: right;
+  font-size: 22px;
+  padding: 26px 0 3px 0px;
+  border: 0px solid black;
+}
+
+.opportunity-list-start-date {
+  float: left;
+  font-size: 18px;
+  width: 230px;
+  text-align: right;
+  padding: 26px 60px 3px 0;
+  border: 0px solid black;
+}
+
+.opportunity-list-end-date {
+  float: left;
+  font-size: 18px;
+  width: 230px;
+  text-align: right;
+  padding: 26px 120px 3px 0;
+  border: 0px solid black;
+}
+
+.home-page-button {
+  @include basic-button;
+  @include button-background-with-hover($blue_2);
+
+  @include mq-mobile{
+    width : 100%;
+  }
+
+  font-weight: normal;
+}
+
+.search-opportunities-button {
+  @extend .home-page-button;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+}
+
+.inactive-opportunities-button {
+  @extend .home-page-button;
+  margin-top: 2em;
+}
+
+.inactive-opportunities{
+}
+
+.search-opportunities {
+  margin-top: 2em;
+  span {
+    display: block;
+  }
+}
+
+#new-opportunity-account-name {
+  width: 100%;
+}
+
+.modal.find-opps-for-account-container {
+  overflow: scroll;
+}
+
+.find-opps-for-account-modal {
+  min-height: 20em;
+  overflow: auto;
+  .modal__title {
+    margin-bottom: 2em;
+  }
+}
+
+.no-opportunities-message {
+  margin-top: 1em;
+}
+
+.find-opps-for-account-results {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  @include mq-desktop {
+    width: 50%;
+    display: inline-block;
+  }
+  ul {
+    @include mq-mobile {
+      padding-left: 0;
+    }
+  }
+}
+
+.toggle-box {
+  display: none;
+}
+
+.toggle-box + label {
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  line-height: 21px;
+  margin-bottom: 5px;
+  height: 40px;
+  padding-top: 22px;
+}
+
+.toggle-box + label + div {
+  display: none;
+  margin-bottom: 10px;
+}
+
+.toggle-box:checked + label + div {
+  display: block;
+}
+
+.toggle-box + label:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 7px 0 7px 13px;
+  border-color: transparent transparent transparent black;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 26px;
+}
+
+.toggle-box:checked + label:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 13px 7px 0 7px;
+  border-color: black transparent transparent transparent;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 25px;
+}
+
+.container-for-account-label {
+  position: relative;
+  .loading {
+    position: absolute;
+    top: 12px;
+    left: 86px;
+    .spinner {
+      font-size: 6px;
+    }
+  }
+
+}
+
+.opportunities-result-list-item {
+  margin-top: 0.5em;
+  padding: 0;
+}
+
+.opportunities-label {
+  margin:0.6em 0 0.4em 0;
+  padding: 0.2em 0 0 0;
+  font-weight: 300;
+  font-size:1.8em;
+  @include mq-desktop {
+    font-size:2.2em;
+    padding: 0 0 0 0;
+    margin:0.8em 0 0.7em 0;
+  }
+
+}
+
+.recent-opportunities {
+  display: hidden;
+}
+
+.section-divider{
+  margin-top: 3em;
+}

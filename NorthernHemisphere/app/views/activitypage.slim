@@ -1,0 +1,20 @@
+/.loading data-bind="visible: isLoading"
+/  div.spinner Loading...
+
+div#activity-gallery
+  div#user-activities
+    div#user-activity
+      div.content
+        h4 北半球开业庆典
+        img src="http://images.apple.com/cn/itunespromos/itunes-this-week/images/2015/7/c31b742e-83da-c2e9-587d-d444694aa36e/image-680x260_2x.jpg" alt="精彩 App 和游戏" height="260"
+      div.divider
+    div#user-activity
+      div.content
+        h4 北半球开业庆典
+        img src="http://images.apple.com/cn/itunespromos/itunes-this-week/images/2015/7/c31b742e-83da-c2e9-587d-d444694aa36e/image-680x260_2x.jpg" alt="精彩 App 和游戏" height="260"
+      div.divider
+
+javascript:
+  $(document).ready(function () {
+    northernHemisphere.activityPageViewModelFactory.applyToPage(window.location);
+  });

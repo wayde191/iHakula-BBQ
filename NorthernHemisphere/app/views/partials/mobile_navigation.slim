@@ -1,0 +1,17 @@
+nav.nav-mobile.mobile-only#mobile-nav
+  ul.mobile-header__menu
+    li#nav-mobile-close.menu-item.menu-item--close
+      a.menu-item__link href="#" ✖
+    li.menu-item
+      a.menu-item__link href="/" Home
+    li.menu-item
+      a.menu-item__link#mobile-find-opportunity-link data-bind="click: showFindOpportunityModal" Find opportunity
+    li.menu-item
+      a.menu-item__link#mobile-spec-add-opportunity href="/opportunity/create" Add opportunity
+    li.menu-item
+      a.menu-item__link#mobile-spec-add-account href="/account/create" Add account
+    li.menu-item
+      a.menu-item__link.js-mobile-feedback href="mailto:sales-systems@thoughtworks.com?subject=Feedback%20on%20SalesFunnel%20app" target="_blank" Feedback
+    - if sales_assistant
+      li.menu-item
+        a#change_user_link.menu-item__link.js-mobile-feedback href="/salesperson-selector" Change user

@@ -1,0 +1,41 @@
+body{
+  background:$pale_grey;
+}
+
+img {
+  vertical-align: baseline;
+  max-width: 100%;
+}
+
+a {
+  color: $blue_tabs;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+strong {
+  color: $black;
+}
+
+ul {
+  margin: 0;
+}
+
+//Removes double tap on IE10 which removes zoom in/zoom out delay on touch devices without the use of FastClick
+a, input, button {
+  -ms-touch-action: none !important;
+}
+
+a.feedback-link {
+  float: right;
+  color: $white;
+}
+
+#preloaded-images {
+  position: absolute;
+  overflow: hidden;
+  left: -9999px;
+  top: -9999px;
+  height: 1px;
+  width: 1px;
+}

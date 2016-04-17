@@ -1,0 +1,35 @@
+@mixin fadeAction {
+  0% {
+    background-color: #FFFFFF;
+  }
+  50% {
+    background-color: #CCE6D7;
+  }
+  100% {
+    background-color: #FFFFFF;
+  }
+}
+
+@-webkit-keyframes fadeIt {
+  @include fadeAction
+}
+
+@-moz-keyframes fadeIt {
+  @include fadeAction
+}
+
+@-o-keyframes fadeIt {
+  @include fadeAction
+}
+
+@keyframes fadeIt {
+  @include fadeAction 
+}
+
+.fade-green {
+  background-image: none !important;
+  -webkit-animation: fadeIt 2s ease-in-out;
+  -moz-animation: fadeIt 2s ease-in-out;
+  -o-animation: fadeIt 2s ease-in-out;
+  animation: fadeIt 2s ease-in-out;
+}

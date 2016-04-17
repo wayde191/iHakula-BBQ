@@ -1,0 +1,23 @@
+#amount-section {
+  float: left;
+  border-top: 1px solid lighten($grey_border, 10%);
+  border-bottom: 1px solid lighten($grey_border, 10%);
+  margin-top:0.05em;
+  padding:0.1em 0;
+  @include mq-desktop {
+    margin-top:0.2em;
+    padding:0.35em 0;
+  }
+}
+
+.amount-container {
+  margin-right: 1em;
+}
+
+.bold-amount {
+  font-weight: 600;
+}
+
+.amount-label {
+  margin-left: 0.3em;
+}

@@ -1,0 +1,3 @@
+@mixin fast-transition {
+  @include transition(all .2s ease-out);
+}

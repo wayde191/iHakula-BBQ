@@ -1,0 +1,237 @@
+.copy-requests-button {
+  position: absolute;
+  bottom: 40px;
+  background-color: #11AA58;
+  @include basic-button;
+
+  @include mq-mobile {
+    position: static;
+  }
+  &:disabled {
+    color: rgb(154, 156, 158);
+    background-color: rgb(204, 204, 204);
+    text-decoration: line-through;
+  }
+}
+
+.list-of-opportunities {
+  padding: 0;
+  max-width: 25em;
+  margin-bottom: 1em;
+}
+
+.copy-requests-modal {
+  .results-label-container {
+    position: relative;
+    display: inline-block;
+    .loading {
+      top: 16px;
+      left: 140px;
+      .spinner {
+        font-size: 6px;
+      }
+    }
+  }
+
+  label {
+    display: block;
+  }
+
+  .full-width-input {
+    width: 100%;
+  }
+
+  h2 {
+    line-height: 1em;
+    margin-right: 45px;
+  }
+
+  .modal__header {
+    button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  .modal__dialog {
+    padding-bottom: 8em;
+  }
+
+  .opportunities-result-list-item-radio {
+    display: none;
+  }
+
+  .opportunities-result-list-item-div {
+    cursor: pointer;
+  }
+
+  .opportunities-result-list-item {
+    padding: 5px 10px;
+    background-color: #E5E5E5;
+    color: #018191;
+    border-radius: 0.2em;
+    border: 2px solid #F9F9F9;
+
+    i.fa-check {
+      display: none;
+    }
+
+    label {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+
+  input[type="radio"]:checked + .opportunities-result-list-item {
+    padding: 5px 30px 5px 10px;
+    background-color: #26BDCF;
+    cursor: pointer;
+    color: white;
+    border-radius: 0.2em;
+    border: 2px solid #36CDDF;
+    position: relative;
+
+    i.fa-check {
+      display: inline-block;
+      right: 10px;
+      position: absolute;
+      top: 8px;
+    }
+  }
+
+  .modal__dialog {
+    position: relative;
+  }
+}
+
+.copy-staffing-requests {
+  @include mq-desktop {
+    margin-left: 0.4em;
+    display: inline-block;
+  }
+
+  button {
+    margin-bottom: 0;
+  }
+
+  ul {
+    z-index: 100;
+    position: absolute;
+    padding: 0;
+    list-style-type: none;
+    min-width: 14em;
+    @include mq-mobile {
+      width: 98%;
+      left: 0.55em;
+    }
+    li {
+      margin: 0;
+      padding: 5px;
+      border: 1px solid #7D7E7E;
+      background-color: #6A6C6F;
+      color: white;
+      width: 100%;
+      cursor: pointer;
+      &:first-child {
+        border-radius: 0 3px 0 0;
+      }
+      &:last-child {
+        border-radius: 0 0 3px 3px;
+      }
+      &:hover {
+        background-color: #7D7E7E;
+      }
+    }
+  }
+}
+
+.copy-requests-summary {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0.5em;
+
+  .summary-details {
+    border: solid 1px $light-grey-border;
+    width: 80%;
+
+    span {
+      display: inline-block;
+      padding: 0.5em;
+    }
+
+    .summary-role {
+      //      map roles to colours here
+      width: 50%;
+      background-color: $blue;
+      color: $white;
+      font-weight: 700;
+
+    }
+    .Dev {
+      background-color: #0cb0c6;
+    }
+
+    .BA {
+
+      background-color: #b53267;
+    }
+
+    .QA {
+      background-color: darken(#77A867, 20%);
+    }
+
+    .XD {
+      background-color: #743D74;
+    }
+
+    .PM {
+      background-color: #2b70b5;
+    }
+
+    .UI {
+      background-color: darken(#6FBBC8, 20%) !important;
+    }
+
+    .DevOps {
+      background-color: #6C5343 !important;
+    }
+
+    .Specialist {
+
+      background-color: #E361A2;
+    }
+
+    .summary-grade {
+      width: 30%;
+    }
+
+    .summary-count {
+      width: 20%;
+    }
+
+  }
+}
+
+.no-active-staffing-requests-message {
+  @include mq-desktop {
+    margin-top: 2em;
+    margin-left: 5%;
+  }
+}
+
+.staffing-summary-list {
+  @include mq-desktop {
+    margin-left: 10%;
+    width: 40%;
+    margin-top: 2em;
+  }
+  width: 80%;
+  display: inline-block;
+}
+
+.import-container {
+  @include mq-desktop {
+    display: flex;
+  }
+}

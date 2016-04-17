@@ -1,0 +1,30 @@
+@mixin mq-iphone-portrait {
+  @media screen and (max-width: $breakPointIPhonePortrait) {
+    @content;
+  }
+}
+
+@mixin mq-mobile {
+  @media screen and (max-width: $breakPoint1) {
+    @content;
+
+  }
+}
+
+@mixin mq-tablet {
+  @media screen and (min-width: $gt_breakPoint1) and (max-width: $breakPoint2) {
+    @content;
+  }
+}
+
+@mixin mq-desktop {
+  @media screen and (min-width: $gt_breakPoint2) {
+    @content;
+  }
+}
+
+@mixin mq-tablet-and-desktop {
+  @media screen and (min-width: $gt_breakPoint1) {
+    @content;
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "NorthernHemisphere",
+  "version": "1.0.0",
+  "authors": [
+    "wayde.sun@gmail.com"
+  ],
+  "description": "For our dreams",
+  "keywords": [
+    "iHakula",
+    "Children",
+    "Family",
+    "Food"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "css-spinners": "1.0.2",
+    "pickadate": "3.5.3",
+    "jquery": "2.1.1",
+    "jquery-ui": "1.10.4",
+    "moment": "2.5.1",
+    "fastclick": "0.6.11",
+    "font-awesome": "4.0.3",
+    "jasmine-jquery": "2.0.3",
+    "jasmine-stealth": "0.0.16",
+    "underscore.string": "2.3.3",
+    "knockout-postbox": "0.5.0",
+    "query-string": "0.4.0",
+    "nouislider": "6.2.0",
+    "jquery-autosize": "1.18.9",
+    "accounting.js": "0.3.2",
+    "shake.js": "~1.2.2"
+  }
+}

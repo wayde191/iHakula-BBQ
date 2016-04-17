@@ -1,0 +1,1032 @@
+@import "../base/typography";
+@import "../modules/buttons";
+
+#staffing-section {
+  margin-bottom: 1em;
+}
+
+.staffing-summary-count {
+  margin-bottom: 5px;
+}
+
+.past-requests-filter-container {
+  display: inline;
+  margin-right: 20px;
+}
+
+.unassigned-requests-filter-container {
+  @include mq-desktop {
+    display: inline;
+  }
+}
+
+.staffing__navigation-button {
+  @include navigation-button;
+  &.full-width {
+    width: 100%;
+  }
+}
+
+.staffing__navigation-button.green-btn {
+  background-color: #11AA58;
+  border: 0;
+  min-width: 8em;
+}
+
+.staffing__navigation-button.move-dates {
+  padding: 0.5em 0;
+}
+
+.staffing-sub-nav__row {
+  border-top: 1px solid lightgray;
+  float: none;
+}
+
+.move-dates-button {
+  margin-top: 0.7em;
+}
+
+.move-dates-head {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.move-dates-message {
+  font-size: 0.9em;
+  @include mq-mobile {
+    width: 85%;
+  }
+  display: inline-block;
+}
+
+.staffing-roles-oppty-title {
+  @include page-title;
+  display: inline;
+  word-wrap: break-word;
+  margin-right: 0.8em;
+  padding-bottom: 0.4em;
+  display: block;
+}
+
+.add-staffing-roles-list {
+  border-bottom: solid 1px #000;
+  border-top: solid 1px #000;
+}
+
+.uncommon-roles-list {
+  margin-top: 1.2em;
+}
+
+.working-offices-container {
+  margin-bottom: 2em;
+  margin-top: 0.9em;
+}
+
+.staffing__navigation-button:disabled {
+  color: lighten($grey, 10%);
+  background-color: $grey_naviagation;
+  text-decoration: line-through;
+}
+
+.staffing-role-container {
+  @include transition(all 2s ease-in-out);
+
+  position: relative;
+  background-color: $white;
+  padding: 0.25em 0.0em 0.0em 0.0em;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+  border: 1px solid $blue_2;
+  border-radius: 2px;
+
+  input {
+    background-color: $white;
+  }
+
+  .form-input--disabled {
+    background: #dbf2f5 !important;
+  }
+
+  .form-dropdown {
+    background-color: $white;
+  }
+  textarea {
+    background-color: $white;
+  }
+}
+
+.staffing-role-container:focus {
+  background-color: $green-active-role;
+  outline: none;
+}
+
+.duration-panel__duration-validation {
+  display: block;
+}
+
+.staffing-role-container .validationMessage {
+  color: $red;
+  font-weight: 400;
+}
+
+.staffing-role-container .validationInput {
+  border: 1px solid $red;
+}
+
+.staffing-role__editable-info {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.staffing-role__header-details {
+  width: 100%;
+}
+
+.staffing-role-header {
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.75em;
+  margin-bottom: 0.3em;
+
+  @include mq-desktop {
+    font-size: 1em;
+  }
+}
+
+.staffing-role-header__name {
+  margin-right: 0.5em;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+.staffing-role-header__grade {
+  margin-right: 1em;
+  color: $black;
+  background-color: $blue_divider;
+  font-weight: 400;
+  padding: 0.15em 0.5em;
+  -webkit-border-radius: 0.1em;
+  -moz-border-radius: 0.1em;
+  border-radius: 0.1em;
+}
+
+.staffing-role-header__date {
+  margin-right: 0.2em;
+}
+
+.staffing-role-header__assignee {
+  display: inline-block;
+  width: 63%;
+  word-break: normal;
+  border-right: 1px solid $blue_divider;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  padding-right: 0.4em;
+}
+
+.staffing-role-header__working_office {
+  float: right;
+  width: 35%;
+  text-align: left;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+
+.staffing-role-header__edit-close {
+  float: right;
+  color: $white;
+  background-color: $blue_2;
+  font-weight: 400;
+  padding: 0.15em 0.5em;
+  margin-right: 0.5em;
+  -webkit-border-radius: 0.1em;
+  -moz-border-radius: 0.1em;
+  border-radius: 0.1em;
+}
+
+.staffing-role-name-grade-container {
+  padding-left: 0.5em;
+  display: inline-block;
+}
+
+.staffing-assigne-and-office-row {
+  border-top: 1px solid $blue_divider;
+  margin-bottom: 0;
+  padding-left: 0.5em;
+  line-height: 1.4em;
+}
+
+.staffing-role-header__dates {
+  border-top: 1px solid $blue_divider;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  padding-left: 0.5em;
+
+  @include mq-desktop {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-top: 0.4em;
+  }
+
+}
+
+.staffing-role__radio {
+  display: none;
+  margin: 10px;
+}
+
+.staffing-role__radio + label {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: $blue_pale;
+  color: $grey_text;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 400;
+  width: 30%;
+  margin: 0.8em 1.6% 0.3%;
+  cursor: pointer;
+
+  @include mq-desktop {
+    width: 120px;
+    margin: 0.2em;
+    font-size: 1em;
+  }
+
+}
+
+.staffing-sub-nav__radio {
+  display: none;
+  margin: 10px;
+}
+
+.staffing-sub-nav__radio + label {
+  display: inline-block;
+  padding: 0.5em 0.4em;
+  background-color: $blue_pale;
+  color: $grey_text;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 400;
+  margin: 0.8em 1.6% 0 0;
+  cursor: pointer;
+
+  @include mq-desktop {
+    font-size: 0.9em;
+    margin: 0.8em 0.6em 0 0;
+  }
+}
+
+.staffing-sub-nav__radio:checked + label {
+  background-image: none;
+  background-color: $blue_2;
+  color: $white;
+  border: 0;
+}
+
+.staffing-role__radio:checked + label {
+  background-image: none;
+  background-color: $blue_2;
+  color: $white;
+  border: 0;
+}
+
+.move-dates-duration {
+  width: 3em;
+  margin-left: 0.4em;
+  margin-right: 0.15em;
+}
+
+.move-dates-duration-label {
+  font-size: 0.8em;
+}
+
+.fa-user {
+  padding-top: 0.2em;
+  color: $blue_2;
+  font-size: 1.3em;
+  padding-right: 0.4em;
+}
+
+.role-count {
+  font-size: 24px;
+  font-weight: 300;
+  padding-bottom: 0.5em;
+}
+
+.staffing-section-content {
+  @include span-columns(12);
+
+  h2 {
+    display: inline;
+  }
+}
+
+#roles-save-success-container {
+  background: $green_3;
+  display: none;
+  color: $white;
+  width: 100%;
+  font-size: 1.2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+#roles-save-success-message {
+  padding-left: 0.6em;
+}
+
+.fa-thumbs-up {
+  font-size: 1.2em;
+  padding-left: 0.5em;
+}
+
+.staffing-role-failure {
+  @include span-columns(12);
+  background: $red;
+  color: $white;
+  font-weight: $medium_font_weight;
+  width: 100%;
+  font-size: 1.2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-top: 0.5em;
+
+  .staffing-role-failure__exclamation {
+    @extend .fa;
+    @extend .fa-exclamation-triangle;
+    font-size: 1.2em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    float: left;
+  }
+
+  .staffing-role-failure__exclamation-large {
+    padding-bottom: 2.0em;
+  }
+
+  .staffing-role-failure__close {
+    margin-left: 0.6em;
+    float: right;
+    padding-right: 1em;
+    color: $white;
+    display: block;
+    float: right;
+  }
+}
+
+.staffing-role-failure--hidden {
+  display: none;
+}
+
+#roles-save-failure-message {
+  width: 80%;
+}
+
+.form-label-inline {
+  display: inline;
+}
+
+.mandatory_field {
+  color: $red;
+}
+
+.assigned {
+  .assignee-name, .assignee-date {
+    color: $greyed-out-text;
+  }
+}
+
+.no-assigned {
+  color: $greyed-out-text;
+}
+
+.staffing-comments-box {
+  resize: none;
+}
+
+.comments-row {
+  margin-bottom: 0;
+}
+
+.assignee-shadow {
+  color: $blue_tabs;
+
+  .assignee-name {
+    color: lighten($grey_text, 30%);
+  }
+  .assignee-date {
+    color: lighten($grey_text, 30%);
+  }
+}
+
+.assignee-shadow-box {
+  padding: 0 0.4em;
+  background-color: $light_grey;
+  float: left;
+  margin-right: 0.4em;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: $midgrey;
+}
+
+.assignee-name {
+  padding-right: 0.5em;
+  @include mq-desktop {
+    float: left;
+  }
+}
+
+.click_assignee {
+  cursor: pointer;
+}
+
+.assignee-date {
+  text-align: right;
+  color: $grey_text;
+  font-size: 0.9em;
+}
+
+.assignee-container {
+  padding-top: 0.25em;
+  padding-bottom: 0.5em;
+  font-size: 0.75em;
+  line-height: 1.2;
+
+  @include mq-desktop {
+    line-height: 1.4;
+  }
+}
+
+.staffing-separator {
+  @include horizontal-rule(0.5em);
+}
+
+.rate-section__toggle-icon {
+  margin-left: 0.5em;
+}
+
+.rate-section__divider {
+  display: block;
+  margin-top: 0.5em;
+  border-bottom: 1px solid lighten($grey_border, 10%);
+  border-top-width: 1px;
+
+}
+
+.rate_scenario {
+  margin-bottom: 0.1em;
+  border-bottom: 1px solid lighten($grey_border, 10%);
+  padding: 0.75em inherit;
+}
+
+.rate_scenario__old {
+  margin-bottom: 0.1em;
+}
+
+.clickableText {
+  color: $blue_tabs;
+  cursor: pointer;
+}
+
+.add-working-office-button {
+  @include basic-button;
+  @include button-background-with-hover($light-grey);
+  font-weight: normal;
+  margin-bottom: 0.4em;
+  color: $blue_tabs;
+}
+
+.add-new-rate-scenario-span {
+  margin-left: 0.5em;
+  font-size: 0.9em;
+  font-weight: 200;
+  @include mq-desktop {
+    font-size: 1.1em;
+  }
+
+}
+
+.rate-section__toggle-icon {
+  margin-left: 0.5em;
+}
+
+.rate-section__delete-icon__old {
+  @extend .fa;
+  @extend .fa-trash-o;
+  font-size: 1.3em;
+  float: right;
+  padding: 0.8em;
+  margin-bottom: -1.5em;
+  margin-top: -1em;
+  margin-right: -0.7em;
+
+}
+
+.rates_display {
+  @include mq-mobile {
+    display: block;
+  }
+}
+
+.rate-section__delete-icon {
+  @extend .fa;
+  @extend .fa-trash-o;
+  @include basic-button;
+  @include button-background-with-hover($grey-secondary);
+
+  float: right;
+  padding: 0.5em;
+  margin-right: 0em;
+  margin-top: 1.4em;
+  background: $grey-secondary;
+  color: $white;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+#rate-section__start-date {
+  margin-bottom: -13px;
+}
+
+.role-edit-page__delete-button {
+  @include basic-button;
+  @include button-background-with-hover($grey-secondary);
+  margin-left: 1em;
+  cursor: pointer;
+
+  i {
+    font-size: 1.3em;
+  }
+}
+
+.role-edit-page__save-button {
+  @include basic-button;
+  @include button-background-with-hover($green_3);
+}
+
+.role-edit-page__no-margin-row {
+  margin-bottom: 0;
+}
+
+.role-edit-page__buttons-row {
+  margin-bottom: 1.5em;
+}
+
+.role-edit-page__subtitle {
+  @include page-subtitle;
+}
+
+.role-edit-page__role-name {
+  @include page-title;
+}
+
+.role-edit-page__duration-panel {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid lighten($grey_border, 10%);
+}
+
+.staffing_request_table_legend {
+  font-size: 0.8em;
+  margin-top: 1em;
+}
+
+.tablesorter {
+
+  width: 100%;
+  text-align: left;
+}
+
+.tablesorter thead .staffing-table-row th, table.tablesorter tfoot .staffing-table-row th {
+  font-weight: 400;
+  background-color: $blue_table_header;
+  padding: 0.6em 0.4em 0.6em 0.4em;
+  border-top: 1px solid lighten($grey_border, 10%);
+  &.comments {
+    border-left: solid 1px $light-grey-border;
+    cursor: default;
+    min-width: 200px;
+  }
+}
+
+.tablesorter thead .staffing-table-row {
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+}
+
+.tablesorter tbody .staffing-table-cell {
+  padding: 0.4em;
+  padding-top: 0.8em;
+}
+
+.tablesorter thead .staffing-table-row .sortable {
+  border-left: solid 1px $light-grey-border;
+  &:first-child {
+    border-left: none;
+  }
+}
+
+.tablesorter thead .staffing-table-row .sortable.tablesorter-headerUnSorted:before {
+  font-family: FontAwesome;
+  top: 0;
+  content: "\F0DC";
+  float: right;
+  padding-right: 0.1em;
+}
+
+.tablesorter thead .staffing-table-row .tablesorter-headerDesc:before {
+  font-family: FontAwesome;
+  top: 0;
+  content: "\F0D7";
+  float: right;
+  padding-right: 0.1em;
+
+}
+
+.tablesorter thead .staffing-table-row .tablesorter-headerAsc:before {
+  font-family: FontAwesome;
+  top: 0;
+  content: "\F0D8";
+  float: right;
+  padding-right: 0.1em;
+
+}
+
+.tablesorter thead .staffing-table-row .tablesorter-headerDesc, .tablesorter thead .staffing-table-row .tablesorter-headerAsc {
+  background-color: $grey_border;
+}
+
+.staffing_request_table {
+  clear: both;
+  margin-top: 0.5em;
+  font-size: 0.8em;
+  width: 100%;
+  border: none;
+
+  .table-header {
+    white-space: nowrap;
+    padding-right: 1.0em;
+    :last-child {
+      padding-right: 0;
+    }
+  }
+
+  .staffing-table-row {
+    text-align: left;
+    border-bottom: 1px solid $light-grey-border;
+
+    &:focus {
+      @include transition(all 1s ease-in-out);
+      border: none;
+      background-color: #b7e7ee !important;
+      .staffing-table-cell {
+        @include transition(background-color 1s ease-in-out, color 1s ease-in-out);
+        border-color: $blue_divider !important;
+        background-color: #b7e7ee !important;
+      }
+      .grade {
+        border-left: solid 1px;
+        border-right: solid 1px;
+      }
+    }
+
+    .staffing-table-cell {
+      vertical-align: top;
+      border: 1px solid $light-grey-border;
+      border-left: none;
+      border-top: none;
+      background: $white;
+      line-height: 1.3em;
+
+      select {
+        width: 100%;
+        font-size: 16px;
+      }
+    }
+
+    .edit {
+      color: $white;
+      text-align: center;
+      cursor: pointer;
+      border-right: none;
+      width: 1%;
+      @include mq-desktop {
+        margin-right: 1em;
+        padding: 0;
+      }
+    }
+
+    .edit-button {
+      background: $very_dark_grey;
+      padding: 0.2em;
+      margin: 0.2em;
+      float: right;
+      font-weight: 500;
+      font-size: 1.2em;
+      width: 2.5em;
+
+      span.title {
+        display: none;
+      }
+    }
+
+    .date {
+      white-space: nowrap;
+    }
+
+    .assignments {
+      width: 25%;
+    }
+    .comments {
+      border: none;
+      width: 10%;
+      padding-right: 0.8em;
+    }
+    .role {
+      background-color: $blue_divider;
+
+      span {
+        display: inline-block;
+      }
+
+      select {
+        display: inline-block;
+      }
+    }
+
+    .select_role {
+      background-color: $blue_divider;
+    }
+
+    .grade {
+      background-color: $blue_hover;
+    }
+  }
+  .hidden_desktop_field {
+    @include mq-desktop {
+      display: none;
+    }
+  }
+
+  .inline-edit-text-comments {
+    span {
+      width: 100%;
+      min-height: 20px;
+    }
+    input {
+      width: 7em;
+      font-size: 14px;
+    }
+  }
+
+  .inline-edit-text {
+    span {
+      width: 100%;
+      min-height: 20px;
+    }
+    input {
+      width: 5em;
+      font-size: 14px;
+    }
+  }
+}
+
+.unassigned-tally {
+  margin-top: 0.52em;
+  display: inline-block;
+}
+
+.sortMobileView {
+  display: none;
+}
+
+.hidden_desktop_field {
+  @include mq-desktop {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sortMobileView {
+    display: inline-block;
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  .hidden_field {
+    padding-left: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .hidden_mobile_field {
+    display: none !important;
+  }
+
+  .mobile-sort {
+    display: inline-block;
+    float: right;
+    border: none;
+    background-color: $grey_slider;
+    height: 2.2em;
+    font-size: 0.8em;
+  }
+
+  .staffing_request_table {
+    background: $pale_grey;
+    font-size: 0.7em;
+    border: none;
+    thead {
+      display: none;
+    }
+    .staffing-table-row {
+      background: $white;
+      position: relative;
+      display: block;
+      margin-bottom: 0.5em;
+      width: 100%;
+      th {
+        display: none;
+      }
+
+      &:focus {
+        outline: 0;
+        .edit {
+          background: $very_dark_grey !important;
+        }
+      }
+
+      .role {
+        width: 25%;
+        padding-left: 0.2em;
+        padding-right: 0;
+      }
+
+      .grade {
+        width: 10%;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+      }
+
+      .office {
+        width: 30%;
+        padding-left: 0.2em;
+        padding-right: 0;
+        white-space: nowrap;
+        margin-bottom: 1px;
+        @include mq-tablet {
+          width: 33%
+        }
+      }
+
+      .select_office {
+        width: 34%;
+        padding-left: 0.2em;
+        padding-right: 0;
+      }
+
+      .rate {
+        width: 35%;
+        text-align: right;
+        padding-right: 4%;
+        float: right;
+        padding-left: 0;
+        @include mq-tablet {
+          width: 22%;
+          padding-right: 6%;
+        }
+      }
+
+      .empty_edit {
+        display: none;
+      }
+
+      .edit-span {
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        text-align: center;
+        background: $very_dark_grey;
+        color: white;
+      }
+
+      .edit-button {
+        display: none;
+      }
+
+      .staffing-table-cell {
+        display: inline-block;
+        border: none;
+        padding-left: 0.2em;
+        padding-top: 0.4em;
+        padding-bottom: 0.4em;
+
+        $start-date-mobile-width: 78px;
+        &.date {
+          border-top: solid 1px $light-grey-border;
+          border-bottom: solid 1px $light-grey-border;
+          &.start {
+            padding-right: 0;
+            width: $start-date-mobile-width;
+          }
+
+          &.end {
+            width: -webkit-calc(100% - #{$start-date-mobile-width});
+            width: -moz-calc(100% - #{$start-date-mobile-width});
+            width: calc(100% - #{$start-date-mobile-width});
+            &:before {
+              content: "  -  ";
+            }
+          }
+        }
+
+        &.comments {
+          border-bottom: none;
+        }
+
+        &.assignments {
+          width: 86%;
+          padding-top: 0.4em;
+          padding-bottom: 0.4em;
+        }
+      }
+
+      .edit {
+        width: 14%;
+        top: 0;
+        float: right;
+        white-space: nowrap;
+        padding: 0;
+        line-height: 1.7em;
+        border-bottom: 2.5px solid $light-grey-border;
+      }
+    }
+  }
+}
+
+.filter-controls {
+  display: flex;
+  margin-top: 0.5em;
+
+  @include mq-desktop {
+    float: right;
+  }
+}
+
+.filter-checkbox {
+  @include basic-checkbox(1.1em);
+  margin-right: 0.4em;
+  margin-top: 0.2em;
+}
+
+.filter-checkbox-label {
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+  margin-top: 0.1em;
+}
+
+.filter-section {
+  padding: 8px;
+  border: 1px solid $light-grey-border;
+  display: inline-block;
+  float: left;
+
+  .filter {
+    display: inline-block;
+    margin-left: 15px;
+    border-left: 1px solid $light-grey-border;
+    padding-left: 15px;
+    font-size: 0.8em;
+    color: $blue_3;
+
+    input {
+      margin-bottom: -0.2em;
+    }
+  }
+
+  .title {
+    color: $black;
+    font-weight: 600;
+    margin-left: 0;
+    border-left: 0;
+  }
+
+}
+
+.inline_edit {
+  display: none;
+}
+
+.inline_editing .inline_edit {
+  width: 90%;
+  display: block;
+}
+
+.inline_editing .inline_view {
+  display: none;
+}

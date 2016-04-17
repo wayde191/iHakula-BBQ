@@ -1,0 +1,88 @@
+/.loading data-bind="visible: isLoading"
+/  div.spinner Loading...
+
+div#activity-gallery
+  div#user-activities
+    div
+      div.content
+        h4 会员更新
+        form method="post" action="upload" name="submit" enctype="multipart/form-data"
+          input type="file" name="fileField"
+          input type="submit" name="submit" value="提交更新"
+      div.divider
+    div
+      div.content
+        h4 商品类型更新
+        form method="post" action="upload_goods_type" name="submit" enctype="multipart/form-data"
+          input type="file" name="fileField"
+          input type="submit" name="submit" value="提交更新"
+      div.divider
+    div
+      div.content
+        h4 商品更新
+        form method="post" action="upload_goods" name="submit" enctype="multipart/form-data"
+          input type="file" name="fileField"
+          input type="submit" name="submit" value="提交更新"
+      div.divider
+    div
+      div.content
+        h4 点商品数
+        form method="post" action="counter/new/goods" name="submit" enctype="multipart/form-data"
+          input type="file" name="fileField"
+          input type="submit" name="submit" value="提交更新"
+      div.divider
+    div
+      div.content
+        h4 添加新商品
+        form method="post" action="add/new/product" name="submit" enctype="multipart/form-data"
+          input type="file" name="fileField"
+          input type="submit" name="submit" value="提交更新"
+      div.divider
+    div
+      div.content
+        h4 更新图片和库存
+        form method="post" action="update/existing_product" name="submit" enctype="multipart/form-data"
+          input type="file" name="fileField"
+          input type="submit" name="submit" value="提交更新"
+      div.divider
+    div
+      div.content
+        h4 只更新图片
+        form method="post" action="update/image" name="submit" enctype="multipart/form-data"
+          input type="file" name="fileField"
+          input type="submit" name="submit" value="提交更新"
+      div.divider
+    div
+      div.content
+        h4 只更新库存
+        form method="post" action="update/stock" name="submit" enctype="multipart/form-data"
+          input type="file" name="fileField"
+          input type="submit" name="submit" value="提交更新"
+      div.divider
+
+    div
+      div.content
+        h4 更新推荐和排名
+        form method="post" action="update/product_ranking" name="submit" enctype="multipart/form-data"
+          input type="file" name="fileField"
+          input type="submit" name="submit" value="提交更新"
+      div.divider
+
+    div
+      div.content
+        h4 更新会员价格到9折
+        form method="post" action="update/member_price" name="submit" enctype="multipart/form-data"
+          input type="submit" name="submit" value="更新会员价格"
+      div.divider
+
+    div
+      div.content
+        h4 导出所有商品
+        form method="post" action="export/csv/goods" name="submit" enctype="multipart/form-data"
+          input type="submit" name="submit" value="全部导出"
+      div.divider
+
+javascript:
+  $(document).ready(function () {
+    northernHemisphere.databaseUpdateViewModelFactory.applyToPage(window.location);
+  });

@@ -1,0 +1,11 @@
+@mixin horizontal-rule($top-bottom-margin) {
+  display: block;
+  height: 1px;
+  border: 0; border-top: 1px solid $light_grey;
+  margin: $top-bottom-margin 0;
+  padding: 0;
+}
+
+.horizontal-rule-grey {
+  @include horizontal-rule(1em);
+}

@@ -1,0 +1,45 @@
+.slider {
+  label {
+    margin-left: auto;
+    width: auto;
+  }
+
+  &.ui-corner-all {
+    @include border-radius(20px, 20px);
+    background-color: $light_grey;
+    border: none;
+  }
+}
+
+.ui-slider .ui-slider-range {
+  @include border-radius(20px, 20px);
+  background: $grey;
+}
+
+.slider .ui-slider-handle.ui-state-default {
+  @include no-border-radius;
+  border: none;
+  background: $blue_2;
+  width: auto;
+  height: auto;
+  padding: 3px 8px;
+  color: $white;
+  font-weight: $heavy_font_weight;
+  font-size: 0.9em;
+
+  &.ui-state-hover {
+    background: $blue_2 !important;
+    border: none !important;
+  }
+
+  &.ui-state-active {
+    background: $blue_2 !important;
+    border: none !important;
+  }
+
+  &.ui-state-focus {
+    background: $blue_2;
+    border: none !important;
+  }
+}
+

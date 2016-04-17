@@ -1,0 +1,65 @@
+.tab-list {
+  @include clearfix;
+  @include bleed($grid-padding);
+  width: 100%;
+  display: inline-block;
+  list-style: none;
+  position: relative;
+
+  .tab-list__tab:nth-child(1) {
+    a {
+      @include bleed($grid-padding, left);
+      text-indent: -$grid-padding;
+    }
+  }
+
+  .tab-list__tab:nth-child(2) {
+
+    a {
+      @include bleed($grid-padding, right);
+      text-indent: $grid-padding;
+    }
+  }
+
+  .tab-list__tab {
+    @include transition(all linear 0.2s);
+    background: $blue_tabs;
+    float: left;
+    width: 50%;
+
+  }
+
+  .tab-list__link {
+    background: $blue_tabs;
+    width: 100%;
+    padding: 0.5em 0em;
+    display: inline-block;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: white;
+    text-align: center;
+
+    &:hover {
+      background: $blue_tabs_hover;
+      text-decoration: none;
+    }
+    @include mq-desktop {
+      padding: 0.9em 0em;
+    }
+  }
+}
+
+.ui-tabs-active {
+  background: $pale_grey !important;
+
+  a {
+    background: $pale_grey !important;
+    color: $black !important;
+
+    &:hover {
+      background: $pale_grey !important;
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+}

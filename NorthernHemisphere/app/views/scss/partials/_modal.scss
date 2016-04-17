@@ -1,0 +1,24 @@
+.modal {
+  @include modal;
+
+  .modal__dialog {
+    @include modal-section;
+  }
+
+  .modal__body {
+    @include span-columns(12);
+  }
+
+  .modal__header {
+
+  }
+
+  .modal__title {
+    @include modal-title;
+  }
+
+  .modal__close {
+    @include close-modal;
+  }
+}
+

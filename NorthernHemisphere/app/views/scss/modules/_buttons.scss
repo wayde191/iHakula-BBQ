@@ -1,0 +1,54 @@
+@mixin basic-button {
+  color: $white;
+  font-size: 18px;
+  padding: 8px 45px;
+  border-radius: 2px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+  border: 0;
+  a {
+    color: $skin_4;
+  }
+  &:hover, &:focus {
+    outline: none;
+  }
+}
+
+@mixin button-full-width-mobile {
+  @include mq-mobile {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+}
+
+@mixin narrow-button {
+  padding: 8px 15px;
+}
+
+@mixin button-background-with-hover($color) {
+  background-color: $color;
+  &:hover, &:focus {
+    background-color: darken($color, 5%);
+  }
+}
+
+@mixin navigation-button {
+  @include basic-button;
+  @include button-background-with-hover($blue_2);
+
+  width: 37%;
+  padding: 0.5em 0;
+  font-weight: 400;
+
+  margin-bottom: 0.15em;
+
+  @include mq-desktop {
+    @include narrow-button;
+    width: auto;
+    padding: auto;
+    margin-bottom: 0.28em;
+  }
+}

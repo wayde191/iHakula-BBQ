@@ -1,0 +1,57 @@
+@import "../modules/borders";
+
+.ui-autocomplete {
+  @include focus-border;
+  background-color: $blue_pale;
+  list-style-type: none;
+  border-right: 2px solid $blue_2;
+}
+
+.autocomplete-item--active {
+  background-color: $white;
+}
+
+li.ui-menu-item a {
+  display: block;
+}
+
+#autocomplete-account-results, #autocomplete-find-opportunity-account-results {
+  position: relative;
+  width: 100%;
+  @include mq-desktop {
+    width: 50%;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    padding: 6px;
+    border-bottom: 1px solid $blue_divider;
+  }
+
+  li:hover {
+    background-color: $white;
+  }
+
+  li:focus {
+    background-color: $white;
+  }
+}
+
+.ui-helper-hidden-accessible {
+  display: none;
+}
+
+#no-matching-accounts-message {
+  background-color: lighten($blue, 10%);
+  padding: 5px 5px 5px 7px;
+}
+
+#find-opportunity-account-name, #find-opportunity-by-account-name {
+  width: 100%;
+  @include mq-desktop {
+    width: 50%;
+  }
+}

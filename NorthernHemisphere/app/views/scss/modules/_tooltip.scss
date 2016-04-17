@@ -1,0 +1,60 @@
+@mixin tooltip($flag, $margin-top, $margin-left, $color: #FFF) {
+  .tooltip {
+    position: relative;
+    color: $color;
+    span {
+      display: none;
+      position: absolute;
+      width: 240px;
+      height: auto;
+      text-align: left;
+      padding: 10px 15px;
+      margin-top: $margin-top;
+      margin-left: $margin-left;
+      background: $very_dark_grey;
+      color: $color;
+      z-index: 999;
+      word-wrap: break-word;
+      @include border-radius(2px);
+
+      @if $flag=="top" {
+        &:before {
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          top: -15px;
+          left: 11%;
+          border: solid transparent;
+          border-bottom-color: $very_dark_grey;
+          border-width: 8px;
+          margin-left: -8px;
+        }
+      }
+      @else {
+        &:before {
+          content: '';
+          position: absolute;
+          top: 20px;
+          right: 100%;
+          margin-top: -8px;
+          width: 0;
+          height: 0;
+          border-right: 8px solid $very_dark_grey;
+          border-top: 8px solid transparent;
+          border-bottom: 8px solid transparent;
+        }
+      }
+    }
+
+    p {
+      display: block;
+      line-height: 1.2em;
+      font-size: 0.8em;
+      margin: 0 0 5px;
+    }
+    h4{
+      margin:0 0 0.4em 0;
+    }
+  }
+}

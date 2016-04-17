@@ -1,0 +1,24 @@
+.add-contact__add-new-label {
+  padding: 0 0.5em;
+  cursor: pointer;
+}
+
+.add-contact__modal-container {
+  @include modal;
+}
+
+.add-contact__modal-section {
+  @include modal-section;
+
+  @include mq-mobile {
+    @include modal-body;
+  }
+}
+
+.add-contact__modal-close {
+  @include close-modal;
+}
+
+.add-contact__modal-title {
+  @include modal-title;
+}

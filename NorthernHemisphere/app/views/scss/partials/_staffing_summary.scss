@@ -1,0 +1,109 @@
+.staffing-summary {
+  @include tooltip("top", 0.5em, 0);
+  @include clearfix;
+  //@include bleed($grid-padding);
+
+  @include mq-desktop {
+    @include bleed(0);
+    font-size: 1em;
+  }
+
+  border-top: 1px solid lighten($grey_border, 10%);
+  border-bottom: 1px solid lighten($grey_border, 10%);
+  margin-bottom: 1em;
+  font-size: 0.8em;
+  overflow: visible;
+
+  .staffing-summary-tally {
+    display: table;
+    vertical-align: middle;
+    width: 100%;
+    @include mq-desktop {
+      //      padding: 0.25em 0;
+    }
+
+    .staffing_tally_amount {
+      color: $blue_tabs;
+      display: table-cell;
+      text-align: left;
+      @include mq-desktop {
+        width: 20%;
+        padding: 0.25em 0;
+      }
+    }
+  }
+
+  .staffing_tally_amount > span {
+    cursor: pointer;
+    &:hover + #amount-tooltip.tooltip span {
+      display: inline;
+    }
+  }
+
+  .approximate-total {
+    @include mq-mobile {
+      width: 10px;
+      height: 10px;
+    }
+    margin-right: 0.4em;
+  }
+}
+
+.visuallyHidden {
+  visibility: hidden;
+}
+
+.staffing-summary__count {
+  @include span-columns(3);
+  border-right: 1px solid $light-grey-border;
+  padding: 0.1em 0;
+
+  @include mq-desktop {
+    padding: 0.25em 0;
+  }
+  @include mq-mobile {
+    width: 40%;
+  }
+}
+
+.staffing-rate-type {
+  padding: 0.1em 0;
+  @include mq-desktop {
+    padding: 0.25em 0;
+  }
+}
+
+.staffing-rate-type-tmp {
+  display: table-cell;
+  text-align: right;
+  @include mq-desktop {
+    border-left: 1px solid $light-grey-border;
+    text-align: left;
+    padding: 0.25em 0 0.25em 0.4em;
+  }
+}
+
+.staffing-summary-modal {
+  .staffing-summary-modal__rate-types {
+    @include clearfix;
+  }
+
+  .staffing-summary-modal__radio-group {
+    float: left;
+    padding-right: 1.5em;
+  }
+
+  .staffing-summary-modal__radio {
+    @include basic-radiobutton(1.8em);
+
+    + label {
+      display: inline-block;
+      padding-bottom: 1em;
+      vertical-align: 10px;
+    }
+  }
+
+  .staffing-summary-modal__button-group {
+    @include clearfix;
+  }
+}

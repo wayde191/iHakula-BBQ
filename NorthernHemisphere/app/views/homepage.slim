@@ -1,0 +1,54 @@
+.loading data-bind="visible: isLoading"
+  div.spinner Loading...
+
+section data-bind="visible: !isLoading() && userFinacial().length > 0" style='display:none'
+  h2.opportunities-label  人员明细
+  .sort
+    .by_start_date.hidden_mobile_field
+      label.sort-label 收入
+      i.fa.fa-sort.sort-icon.hidden_mobile_field#spec-sort-button data-bind="click: function(){ }"
+    .by_end_date.hidden_mobile_field
+      label.sort-label 支出
+      i.fa.fa-sort.sort-icon.hidden_mobile_field#spec-sort-button data-bind="click: function(){ }"
+    .by_probability
+      label.sort-label 利润
+      i.fa.fa-sort.sort-icon#spec-sort-button data-bind="click: function(){ }"
+  ul#user-opportunities data-bind="foreach: userFinacial"
+    li.opportunity.my-opportunities
+      a data-bind="attr: {href: '/#'}"
+        div.opportunity-list-title
+          span.account-name data-bind="text: ''"
+          span.spec-opportunity.opportunity-name data-bind="text: text"
+        div.opportunity-info
+          div.opportunity-list-start-date.hidden_mobile_field data-bind="text: '+' + totalEarn"
+          div.opportunity-list-end-date.hidden_mobile_field data-bind="text: '-' + totalCost"
+          div.opportunity-list-probability data-bind="text: revenue"
+
+
+section data-bind="visible: !isLoading() && saleRecords().length > 0" style='display:none'
+  h2.opportunities-label  销售记录
+  .sort
+    .by_start_date.hidden_mobile_field
+      label.sort-label 金额
+      i.fa.fa-sort.sort-icon.hidden_mobile_field#spec-sort-button data-bind="click: function(){ toggleActiveSort(activeOpportunities, 'startDate'); }"
+    .by_end_date.hidden_mobile_field
+      label.sort-label 时间
+      i.fa.fa-sort.sort-icon.hidden_mobile_field#spec-sort-button data-bind="click: function(){ toggleActiveSort(activeOpportunities, 'endDate'); }"
+    .by_probability
+      label.sort-label 其它
+      i.fa.fa-sort.sort-icon#spec-sort-button data-bind="click: function(){ toggleActiveSort(activeOpportunities, 'probability'); }"
+  ul#user-opportunities data-bind="foreach: saleRecords"
+    li.opportunity.my-opportunities
+      a data-bind="attr: {href: '/#'}"
+        div.opportunity-list-title
+          span.account-name data-bind="text: user"
+          span.spec-opportunity.opportunity-name data-bind="text: text"
+        div.opportunity-info
+          div.opportunity-list-start-date.hidden_mobile_field data-bind="text: money"
+          div.opportunity-list-end-date.hidden_mobile_field data-bind="text: date"
+          div.opportunity-list-probability data-bind="text: "
+
+javascript:
+  $(document).ready(function () {
+    northernHemisphere.homePageViewModelFactory.applyToPage(window.location);
+  });

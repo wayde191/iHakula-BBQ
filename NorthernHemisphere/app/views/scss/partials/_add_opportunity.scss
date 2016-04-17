@@ -1,0 +1,42 @@
+@import "../modules/borders";
+
+.opportunity-input:focus {@include focus-border;}
+
+.opportunity-input {
+  display: block;
+  margin: 0;
+  width: 100%; height: 40px;
+  line-height: 40px; font-size: 17px;
+  border:0;
+  border-bottom: 3px solid #bbb;
+  padding:6px;
+  background:$light_grey;
+}
+
+.create-opportunity__add-new-account-label {
+  padding: 0 0.5em;
+  cursor: pointer;
+}
+
+#opportunity-name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.newly-added-opportunity {
+  animation: animate-new-opportunity 2s;
+  -webkit-animation: animate-new-opportunity 2s;
+}
+
+@keyframes animate-new-opportunity
+{
+  from {background-color: $yellow;}
+  to {background-color: $white;}
+}
+
+@-webkit-keyframes animate-new-opportunity /* Safari and Chrome */
+{
+  from {background-color: $yellow;}
+  to {background-color: $white;}
+}
+

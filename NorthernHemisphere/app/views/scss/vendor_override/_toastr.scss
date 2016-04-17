@@ -1,0 +1,38 @@
+#toast-container .toast {
+  width: 100% !important;
+  border-radius: 0 !important;
+  font-weight: 600;
+  opacity: 1;
+  padding: 15px 15px 15px 55px;
+}
+#toast-container .toast-success {
+  background-color: $green_3;
+  background-image: url('../images/notification_icon_success.png') !important;
+}
+
+#toast-container .toast-info {
+  background-color: $grey;
+  background-image: url('../images/notification_icon_info.png') !important;
+}
+
+#toast-container .toast-error {
+  background-color: $red;
+  background-image: url('../images/notification_icon_error.png') !important;
+}
+
+#toast-container .toast-warning {
+  background-image: url('../images/notification_icon_warning.png') !important;
+}
+
+#toast-container > div {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+}
+#toast-container > :hover {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+}
